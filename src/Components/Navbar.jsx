@@ -8,7 +8,7 @@ import ButtonTheme from "./ButtonTheme/ButtonTheme";
 
 const Navbar = () => {
   const { theme, dispatchTheme } = useContextGlobal();
-  const { home, contact, favs, dentist } = links;
+  const { home, contact, favs} = links;
 
   const handleTheme = () => {
     console.log(theme);
@@ -23,7 +23,6 @@ const Navbar = () => {
         <Link to={home.path}>{home.name}</Link>
         <Link to={contact.path}>{contact.name}</Link>
         <Link to={favs.path}>{favs.name}</Link>
-        <Link to={dentist.path}>{dentist.name}</Link>
         {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
         <ButtonTheme onClick={handleTheme} />
       </div>
