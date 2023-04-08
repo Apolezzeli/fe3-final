@@ -1,16 +1,17 @@
 import { createContext, useContext, useReducer, useState } from "react";
 
-export const initialThemeState = {theme: "light", color: "light"};
+export const initialThemeState = { theme: "light", color: "light" };
 const initialDentistState = [];
 
 export const ContextGlobal = createContext();
 
-const themeReducer = (state, action) => {console.log("state",state);
+const themeReducer = (state, action) => {
+  console.log("state", state);
   switch (action.type) {
     case "SET_LIGHT":
-      return { ...state, theme:"light", color: "light" };
+      return { ...state, theme: "light", color: "light" };
     case "SET_DARK":
-      return { ...state, theme:"dark", color: "dark" };
+      return { ...state, theme: "dark", color: "dark" };
     default:
       return state;
   }

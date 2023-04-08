@@ -10,7 +10,7 @@ const Card = ({ name, username, id }) => {
     const favs = JSON.parse(localStorage.getItem("favorites")) || [];
     const isFav = favs.find((fav) => fav.id === id) ? true : false;
     setIsFav(isFav);
-  }, []);
+  }, [id],);
 
   const addFav = () => {
     // Aqui iria la logica para agregar la Card en el localStorage

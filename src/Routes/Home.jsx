@@ -13,7 +13,7 @@ const Home = () => {
       .then((data) => {
         setDentists(data);
       });
-  }, []);
+  },);
 
   return (
     <main className={theme.color} >

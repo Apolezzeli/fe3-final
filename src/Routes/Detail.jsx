@@ -20,7 +20,7 @@ const Detail = () => {
       })
     const o = dentists.find((dentist) => dentist.id === id);
     setDentist(o);
-  }, []);
+  }, [id, dentists],);
 
   return (
     <div className={theme.color}>
